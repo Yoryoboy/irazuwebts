@@ -15,6 +15,12 @@ const PageHero = ({
   centered = true,
   backgroundImage,
   children,
+}: {
+  title: string;
+  description: string;
+  centered?: boolean;
+  backgroundImage?: string;
+  children?: React.ReactNode;
 }) => {
   // Determine if we should use the home page style (with background image) or standard style
   const isHomeStyle = !!backgroundImage;
