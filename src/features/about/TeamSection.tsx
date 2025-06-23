@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import TeamGrid from "./TeamGrid";
 const TeamSection = () => {
   const titleRef = useRef(null);
   const isTitleInView = useInView(titleRef, {
@@ -26,6 +27,7 @@ const TeamSection = () => {
           <div className="w-24 h-1 bg-blue-600 mx-auto mt-6"></div>
         </motion.div>
       </div>
+      <TeamGrid />
     </section>
   );
 };
