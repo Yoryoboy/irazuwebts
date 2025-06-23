@@ -52,7 +52,7 @@ function Timeline({ reference }: TimelineProps) {
       animate={isInView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="relative">
+      <div className="relative max-w-4xl mx-auto">
         <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gray-700 md:transform md:-translate-x-px"></div>
 
         {data.map((item, index) => (

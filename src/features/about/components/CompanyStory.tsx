@@ -14,22 +14,24 @@ function CompanyStory({ reference }: CompanyStoryProps) {
       animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
       transition={{ duration: 0.8 }}
     >
-      <p className="text-gray-700 mb-6">
-        Founded in 2020 in Denver, Colorado, Irazu Technology was born to meet
-        the growing demand for HFC and FTTH network designs in the U.S. market.
-        Backed by over 40 years of combined experience in Cable TV and
-        Communications, we bring expertise, innovation, and a people-first
-        approach to every project.
+      <p className="text-gray-800 mb-6 leading-relaxed text-lg max-w-3xl mx-auto">
+        <span className="font-semibold">Founded in 2020</span> in Denver,
+        Colorado, Irazu Technology emerged to address the growing demand for HFC
+        and FTTH network designs across the United States. With over 40 years of
+        combined expertise in Cable TV and Communications, we deliver innovative
+        solutions with a people-first philosophy.
       </p>
-      <p className="text-gray-700 mb-6">
-        We're proud to have collaborated with industry leaders such as Charter,
-        Comcast, SEFNCO, and Claro, delivering exceptional network design
-        solutions that meet the highest standards of quality and performance.
+      <p className="text-gray-800 mb-6 leading-relaxed text-lg max-w-3xl mx-auto">
+        We take pride in our strategic partnerships with industry leaders
+        including Charter, Comcast, SEFNCO, and Claro. Through these
+        collaborations, we consistently deliver network design solutions that
+        exceed expectations in both quality and performance.
       </p>
-      <p className="text-gray-700 mb-6">
-        Today, we've grown to a team of engineers and specialists while
-        maintaining our focus on excellence, efficiency, and long-term client
-        satisfaction.
+      <p className="text-gray-800 mb-6 leading-relaxed text-lg max-w-3xl mx-auto">
+        As we've expanded to a specialized team of engineers and technical
+        experts, our commitment remains unwavering: excellence in execution,
+        operational efficiency, and lasting client relationships that stand the
+        test of time.
       </p>
     </motion.div>
   );

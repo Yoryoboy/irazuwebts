@@ -11,7 +11,7 @@ function CompanyBackgroundSection() {
       <div className="container mx-auto px-4">
         <SectionTitle title="Our Story" reference={titleRef} />
 
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-16 max-w-6xl mx-auto">
           <CompanyStory reference={contentRef} />
           <Timeline reference={timelineRef} />
         </div>

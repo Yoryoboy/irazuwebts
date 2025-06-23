@@ -6,44 +6,44 @@ function TimelineItem({ item, index }: TimelineItemProps) {
 
   return (
     <div
-      className={`relative flex items-start mb-8 md:mb-12 ${
+      className={`relative flex items-start mb-4 md:mb-4 ${
         isEven ? "md:flex-row-reverse" : ""
       }`}
     >
       {/* Timeline dot */}
-      <div className="absolute left-6 md:left-1/2 w-3 h-3 bg-white border-2 border-gray-600 rounded-full md:transform md:-translate-x-1.5 z-10"></div>
+      <div className="absolute left-6 md:left-1/2 w-4 h-4 bg-white border-2 border-gray-600 rounded-full md:transform md:-translate-x-2 z-10 shadow-md"></div>
 
       {/* Content */}
       <div
         className={`ml-16 md:ml-0 md:w-1/2 ${
-          isEven ? "md:pr-8 md:text-right" : "md:pl-8"
+          isEven ? "md:pr-12 md:text-right" : "md:pl-12"
         }`}
       >
-        <div className="group">
+        <div className="group bg-transparent p-5 rounded-lg transition-opacity duration-300">
           <div
-            className={`flex items-center gap-3 mb-2 ${
+            className={`flex items-center gap-3 mb-3 ${
               isEven ? "md:justify-end" : ""
             }`}
           >
             <div
-              className={`p-2 rounded-lg bg-gray-800 text-gray-300 ${
+              className={`p-2.5 rounded-lg bg-blue-600 text-white shadow-sm ${
                 isEven ? "md:order-2" : ""
               }`}
             >
-              <Icon className="w-4 h-4" />
+              <Icon className="w-5 h-5" />
             </div>
             <span
-              className={`text-xs font-medium text-gray-400 ${
+              className={`text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full ${
                 isEven ? "md:order-1" : ""
               }`}
             >
               {item.date}
             </span>
           </div>
-          <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-gray-300 transition-colors duration-200">
+          <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-700 transition-colors duration-200">
             {item.title}
           </h3>
-          <p className="text-sm text-gray-400 leading-relaxed">
+          <p className="text-base text-gray-600 leading-relaxed">
             {item.content}
           </p>
         </div>
