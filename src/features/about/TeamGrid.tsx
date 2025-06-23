@@ -1,12 +1,16 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Linkedin } from "lucide-react";
-
+import carlos from "@/assets/images/team/carlos.webp";
+import cecilia from "@/assets/images/team/ceci.webp";
+import jorge from "@/assets/images/team/jorge.webp";
+import efrain from "@/assets/images/team/efra.webp";
+import lautaro from "@/assets/images/team/lautaro.webp";
 const teamMembers = [
   {
     name: "Carlos Salazar",
     position: "CEO",
     bio: "Founder of Irazu Technology with 40+ years in telecommunications, specializing in HFC and FTTH network design across North America. Delivers innovative, cost-effective solutions.",
-    image: "/team/ceo.jpg",
+    image: carlos,
     linkedin: "#",
     email: "carlos@irazu.tech",
   },
@@ -14,7 +18,7 @@ const teamMembers = [
     name: "Cecilia Barbosa",
     position: "Accounting",
     bio: "Cecilia Barbosa is a seasoned accountant with over xx years of experience in the industry. She is responsible for ensuring the accuracy and integrity of our financial records and reporting.",
-    image: "/team/cto.jpg",
+    image: cecilia,
     linkedin: "#",
     email: "cecilia@irazu.tech",
   },
@@ -22,7 +26,7 @@ const teamMembers = [
     name: "Jorge Diaz",
     position: "Project Manager",
     bio: "Jorge Diaz is a seasoned project manager with over 7 years of experience in the industry. He is responsible for ensuring the accuracy and integrity of our financial records and reporting.",
-    image: "/team/coo.jpg",
+    image: jorge,
     linkedin: "#",
     email: "jorge@irazu.tech",
   },
@@ -30,7 +34,7 @@ const teamMembers = [
     name: "Efrain Camacho",
     position: "Project Manager",
     bio: "Efrain Camacho is a seasoned project manager with over 7 years of experience in the industry. He is responsible for ensuring the accuracy and integrity of our financial records and reporting.",
-    image: "/team/cfo.jpg",
+    image: efrain,
     linkedin: "#",
     email: "efrain@irazu.tech",
   },
@@ -38,7 +42,7 @@ const teamMembers = [
     name: "Lautaro Rodriguez",
     position: "Project Manager",
     bio: "Lautaro Rodriguez is a seasoned project manager with over 5 years of experience in the industry. He is responsible for ensuring the accuracy and integrity of our financial records and reporting.",
-    image: "/team/cfo.jpg",
+    image: lautaro,
     linkedin: "#",
     email: "lautaro@irazu.tech",
   },
@@ -48,7 +52,6 @@ export default function TeamGrid() {
   return (
     <section className="py-12">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-10">Meet the Team</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {teamMembers.map((member, idx) => (
             <Card key={idx} className="h-full flex flex-col">

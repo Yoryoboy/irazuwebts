@@ -16,7 +16,7 @@ const TeamSection = () => {
           initial={{ opacity: 0 }}
           animate={isTitleInView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             Our Leadership Team

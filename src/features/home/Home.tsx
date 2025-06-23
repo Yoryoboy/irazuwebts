@@ -12,13 +12,13 @@ const Home = () => {
   return (
     <>
       <SEOHelmet
-        title="Innovative Technology Solutions"
+        title="Leading Telecommunication Network Design Services"
         siteName="Irazu Technology"
-        description="Irazu Technology provides innovative technology solutions with integrity and excellence."
+        description="Expert telecommunication network design services specializing in HFC and FTTH solutions for the modern digital infrastructure"
       />
       <PageHero
-        title="Best in Class Custom Technology Solutions"
-        description="Single Source Solutions including Consulting, Engineering, Development, and Technical Services"
+        title="Leading Telecommunication Network Design Services"
+        description="Expert telecommunication network design services specializing in HFC and FTTH solutions for the modern digital infrastructure"
         centered={false}
         backgroundImage={companyImage}
       >
@@ -42,7 +42,7 @@ const Home = () => {
       <JoinTeamSection />
       <CTA
         title="Ready to Get Started?"
-        description="Contact us today to discuss how we can help with your technology needs"
+        description="Contact us today to discuss how we can help with your telecommunication needs"
         buttonText="Contact Us"
         buttonLink="/contact"
         bgColor="bg-blue-50"
