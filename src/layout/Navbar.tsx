@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logoImage from "../assets/logos/logo_no_backgorund.png";
 
-const Navbar = () => {
+function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -99,6 +99,6 @@ const Navbar = () => {
       )}
     </header>
   );
-};
+}
 
 export default Navbar;
