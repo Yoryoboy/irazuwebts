@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import PageHero from "../../components/PageHero";
 import SEOHelmet from "../../components/SEOHelmet";
 
-const Contact = () => {
+function Contact() {
   const {
     register,
     handleSubmit,
@@ -322,6 +322,6 @@ const Contact = () => {
       </section>
     </>
   );
-};
+}
 
 export default Contact;
