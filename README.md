@@ -1,54 +1,85 @@
-# React + TypeScript + Vite
+# Irazu Technology Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+A modern, responsive website for Irazu Technology, a company specializing in telecom network design services including FTTH (Fiber to the Home) designs, HFC (Hybrid Fiber-Coax) network design, and node split & segmentation services. Built with React, TypeScript, Vite, and TailwindCSS.
 
-Currently, two official plugins are available:
+## Features
+- **Responsive Design**: Fully responsive layout that works on mobile, tablet, and desktop devices
+- **Modern UI**: Clean and professional interface with animations and transitions
+- **Component-Based Architecture**: Modular components for better maintainability
+- **Performance Optimized**: Lazy loading, code splitting, and optimized assets
+- **Accessibility**: Designed with accessibility in mind, including proper contrast and semantic HTML
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+- **Frontend Framework**: React 18
+- **Language**: TypeScript
+- **Build Tool**: Vite
+- **Styling**: TailwindCSS
+- **Routing**: React Router v6
+- **Animations**: Framer Motion
+- **SEO**: React Helmet Async
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Project Structure
+```
+src/
+├── assets/          # Static assets like images
+├── components/      # Reusable UI components
+├── features/        # Feature-specific components
+│   ├── home/        # Home page components
+│   ├── about/       # About page components
+│   ├── services/    # Services page components
+│   ├── join/        # Join/Careers page components
+│   └── contact/     # Contact page components
+├── layout/          # Layout components (Navbar, Footer, etc.)
+├── routes/          # Routing configuration
+└── App.tsx          # Main application component
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Key Components
+- **PageHero**: Hero section with background image and text overlay
+- **CTA**: Call-to-action component with customizable styling
+- **ServicesHighlight**: Showcase of featured telecom services
+- **BuildFutureSection**: Company vision and mission statement section
+- **ScrollToTop**: Utility component for scroll restoration between page navigations
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Animation Strategy
+The website uses Framer Motion for animations with a focus on:  
+- Fade-in effects triggered on scroll using `useInView` hook
+- Consistent animation patterns across components
+- Performance optimization to avoid rendering issues
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+## Getting Started
+
+### Prerequisites
+- Node.js 16.x or higher
+- npm or yarn
+
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/irazuweb.git
+cd irazuweb
+
+# Install dependencies
+npm install
+# or
+yarn
+
+# Start development server
+npm run dev
+# or
+yarn dev
 ```
+
+### Building for Production
+```bash
+npm run build
+# or
+yarn build
+```
+
+## Deployment
+The built files will be in the `dist` directory and can be deployed to any static hosting service like Netlify, Vercel, GitHub Pages, etc.
+
+## License
+All rights reserved. This codebase is proprietary and confidential.
