@@ -44,7 +44,7 @@ const CompanyBackgroundSection = () => {
           <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 gap-12">
           <motion.div
             ref={contentRef}
             initial={{ opacity: 0, x: -20 }}
@@ -75,28 +75,28 @@ const CompanyBackgroundSection = () => {
 
           <motion.div
             ref={imageRef}
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={
-              isImageInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }
+              isImageInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
             }
             transition={{ duration: 0.8 }}
-            className="bg-card p-6 rounded-lg shadow-lg"
+            className="w-full py-8"
           >
-            <h3 className="text-2xl font-bold mb-6 text-gray-800">Our Journey</h3>
+            <h3 className="text-2xl font-bold mb-12 text-gray-800 text-center">Our Journey</h3>
             
-            <Timeline>
+            <Timeline horizontal={true} className="pb-8 px-6">
               {/* Phase 1 */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isImageInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
               >
-                <TimelineItem>
-                  <TimelineIcon icon={<RocketIcon size={16} />} />
-                  <TimelineTitle>Founded in Denver</TimelineTitle>
-                  <TimelineDate>January 2020</TimelineDate>
-                  <TimelineContent>
-                    <p>Irazu Technology was born to meet the growing demand for HFC and FTTH network designs in the U.S. market.</p>
+                <TimelineItem horizontal={true}>
+                  <TimelineIcon horizontal={true} icon={<RocketIcon size={20} />} />
+                  <TimelineTitle horizontal={true}>Founded in Denver</TimelineTitle>
+                  <TimelineDate horizontal={true}>January 2020</TimelineDate>
+                  <TimelineContent horizontal={true}>
+                    <p>Irazu Technology was born to meet the growing demand for HFC and FTTH network designs.</p>
                   </TimelineContent>
                 </TimelineItem>
               </motion.div>
@@ -107,12 +107,12 @@ const CompanyBackgroundSection = () => {
                 animate={isImageInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
               >
-                <TimelineItem>
-                  <TimelineIcon icon={<GearIcon size={16} />} />
-                  <TimelineTitle>First Major Projects</TimelineTitle>
-                  <TimelineDate>March 2021</TimelineDate>
-                  <TimelineContent>
-                    <p>Began collaborations with industry leaders such as Charter, Comcast, and SEFNCO, delivering exceptional network design solutions.</p>
+                <TimelineItem horizontal={true}>
+                  <TimelineIcon horizontal={true} icon={<GearIcon size={20} />} />
+                  <TimelineTitle horizontal={true}>First Major Projects</TimelineTitle>
+                  <TimelineDate horizontal={true}>March 2021</TimelineDate>
+                  <TimelineContent horizontal={true}>
+                    <p>Began collaborations with industry leaders such as Charter, Comcast, and SEFNCO.</p>
                   </TimelineContent>
                 </TimelineItem>
               </motion.div>
@@ -123,12 +123,12 @@ const CompanyBackgroundSection = () => {
                 animate={isImageInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
               >
-                <TimelineItem>
-                  <TimelineIcon icon={<TargetIcon size={16} />} />
-                  <TimelineTitle>Team Expansion</TimelineTitle>
-                  <TimelineDate>June 2022</TimelineDate>
-                  <TimelineContent>
-                    <p>Grew to a team of 10+ engineers and specialists while maintaining our focus on excellence and efficiency.</p>
+                <TimelineItem horizontal={true}>
+                  <TimelineIcon horizontal={true} icon={<TargetIcon size={20} />} />
+                  <TimelineTitle horizontal={true}>Team Expansion</TimelineTitle>
+                  <TimelineDate horizontal={true}>June 2022</TimelineDate>
+                  <TimelineContent horizontal={true}>
+                    <p>Grew to a team of 10+ engineers and specialists focused on excellence.</p>
                   </TimelineContent>
                 </TimelineItem>
               </motion.div>
@@ -139,12 +139,12 @@ const CompanyBackgroundSection = () => {
                 animate={isImageInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.5, delay: 0.7 }}
               >
-                <TimelineItem>
-                  <TimelineIcon icon={<FlagIcon size={16} />} />
-                  <TimelineTitle>Market Leadership</TimelineTitle>
-                  <TimelineDate>Present</TimelineDate>
-                  <TimelineContent>
-                    <p>Established as a trusted partner for telecommunication network design with over 40 years of combined industry experience.</p>
+                <TimelineItem horizontal={true}>
+                  <TimelineIcon horizontal={true} icon={<FlagIcon size={20} />} />
+                  <TimelineTitle horizontal={true}>Market Leadership</TimelineTitle>
+                  <TimelineDate horizontal={true}>Present</TimelineDate>
+                  <TimelineContent horizontal={true}>
+                    <p>Established as a trusted partner with 40+ years of combined experience.</p>
                   </TimelineContent>
                 </TimelineItem>
               </motion.div>
