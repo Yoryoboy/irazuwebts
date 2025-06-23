@@ -1,7 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-const MissionVisionSection = () => {
+function MissionVisionSection() {
   const missionRef = useRef(null);
   const visionRef = useRef(null);
   const isMissionInView = useInView(missionRef, {
@@ -66,6 +66,6 @@ const MissionVisionSection = () => {
       </div>
     </section>
   );
-};
+}
 
 export default MissionVisionSection;

@@ -2,8 +2,8 @@ import { motion, useInView } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
 
-const CTA = ({ 
-  title = "Ready to Transform Your Business?", 
+function CTA({
+  title = "Ready to Transform Your Business?",
   description = "Contact us today to discuss how our services can help you achieve your technology goals",
   buttonText = "Get in Touch",
   buttonLink = "/contact",
@@ -15,8 +15,8 @@ const CTA = ({
   buttonBgColor = "bg-white",
   buttonTextColor = "text-blue-600",
   buttonHoverBgColor = "hover:bg-blue-50",
-  paddingY = "py-16 md:py-24"
-}) => {
+  paddingY = "py-16 md:py-24",
+}) {
   // Fix animation rendering with useInView hook
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px 0px" });
@@ -34,10 +34,14 @@ const CTA = ({
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className={`text-3xl md:text-4xl font-bold mb-6 ${finalHeadingColor}`}>
+          <h2
+            className={`text-3xl md:text-4xl font-bold mb-6 ${finalHeadingColor}`}
+          >
             {title}
           </h2>
-          <p className={`text-xl max-w-3xl mx-auto mb-8 ${finalDescriptionColor}`}>
+          <p
+            className={`text-xl max-w-3xl mx-auto mb-8 ${finalDescriptionColor}`}
+          >
             {description}
           </p>
           <Link
@@ -50,6 +54,6 @@ const CTA = ({
       </div>
     </section>
   );
-};
+}
 
 export default CTA;

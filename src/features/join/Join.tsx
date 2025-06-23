@@ -1,7 +1,7 @@
 import PageHero from "../../components/PageHero";
 import SEOHelmet from "../../components/SEOHelmet";
 
-const Join = () => {
+function Join() {
   return (
     <>
       <SEOHelmet
@@ -33,6 +33,6 @@ const Join = () => {
       </section>
     </>
   );
-};
+}
 
 export default Join;

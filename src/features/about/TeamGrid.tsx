@@ -48,7 +48,7 @@ const teamMembers = [
   },
 ];
 
-export default function TeamGrid() {
+function TeamGrid() {
   return (
     <section className="py-12">
       <div className="container mx-auto px-4">
@@ -88,3 +88,5 @@ export default function TeamGrid() {
     </section>
   );
 }
+
+export default TeamGrid;

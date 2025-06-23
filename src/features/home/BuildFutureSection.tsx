@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { Link } from "react-router-dom";
 import companyImage from "../../assets/images/telecommunications-build.webp";
 
-const BuildFutureSection = () => {
+function BuildFutureSection() {
   const ref1 = useRef(null);
   const ref2 = useRef(null);
   const isInView1 = useInView(ref1, { once: true, margin: "-100px 0px" });
@@ -89,6 +89,6 @@ const BuildFutureSection = () => {
       </div>
     </section>
   );
-};
+}
 
 export default BuildFutureSection;

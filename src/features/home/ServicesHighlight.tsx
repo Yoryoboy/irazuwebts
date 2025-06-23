@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { Link } from "react-router-dom";
 import ServiceCard from "./ServiceCard";
 
-const ServicesHighlight = () => {
+function ServicesHighlight() {
   const titleRef = useRef(null);
   const buttonRef = useRef(null);
   const isTitleInView = useInView(titleRef, {
@@ -131,6 +131,6 @@ const ServicesHighlight = () => {
       </div>
     </section>
   );
-};
+}
 
 export default ServicesHighlight;

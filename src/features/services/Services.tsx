@@ -3,7 +3,7 @@ import PageHero from "../../components/PageHero";
 import SEOHelmet from "../../components/SEOHelmet";
 import ServicesList from "./ServicesList";
 
-const Services = () => {
+function Services() {
   return (
     <>
       <SEOHelmet
@@ -21,7 +21,7 @@ const Services = () => {
       <ServicesList />
 
       {/* CTA Section */}
-      <CTA 
+      <CTA
         title="Ready to Transform Your Business?"
         description="Contact us today to discuss how our services can help you achieve your technology goals"
         buttonText="Get in Touch"
@@ -34,6 +34,6 @@ const Services = () => {
       />
     </>
   );
-};
+}
 
 export default Services;

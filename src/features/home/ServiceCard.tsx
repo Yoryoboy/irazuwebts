@@ -2,7 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 
-const ServiceCard = ({ service, index }) => {
+function ServiceCard({ service, index }: { service: any; index: number }) {
   const cardRef = useRef(null);
   const isCardInView = useInView(cardRef, { once: true, margin: "-50px 0px" });
 
@@ -45,6 +45,6 @@ const ServiceCard = ({ service, index }) => {
       </div>
     </motion.div>
   );
-};
+}
 
 export default ServiceCard;

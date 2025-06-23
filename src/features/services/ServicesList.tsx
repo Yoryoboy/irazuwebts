@@ -6,7 +6,7 @@ import ServiceCard from "./ServiceCard";
  * @param {Object} props
  * @param {Array} props.services - Optional array of services to render (defaults to servicesInfo)
  */
-const ServicesList = ({ services = servicesInfo }) => {
+function ServicesList({ services = servicesInfo }) {
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
@@ -16,6 +16,6 @@ const ServicesList = ({ services = servicesInfo }) => {
       </div>
     </section>
   );
-};
+}
 
 export default ServicesList;

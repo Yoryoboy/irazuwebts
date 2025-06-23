@@ -3,14 +3,12 @@ import { lazy, Suspense } from "react";
 import MainLayout from "../layout/MainLayout";
 import PageLoader from "../components/PageLoader";
 
-// Lazy load pages for better performance
 const Home = lazy(() => import("../features/home/Home"));
 const About = lazy(() => import("../features/about/About"));
 const Services = lazy(() => import("../features/services/Services"));
 const Join = lazy(() => import("../features/join/Join"));
 const Contact = lazy(() => import("../features/contact/Contact"));
 
-// Create router with routes
 export const router = createBrowserRouter([
   {
     path: "/",

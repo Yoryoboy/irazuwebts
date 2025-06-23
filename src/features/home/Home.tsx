@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import CTA from "../../components/CTA";
 import PageHero from "../../components/PageHero";
 import SEOHelmet from "../../components/SEOHelmet";
@@ -8,7 +7,7 @@ import companyImage from "../../assets/images/hero-telecom.webp";
 import ServicesHighlight from "./ServicesHighlight";
 import JoinTeamSection from "./JoinTeamSection";
 
-const Home = () => {
+function Home() {
   return (
     <>
       <SEOHelmet
@@ -55,6 +54,6 @@ const Home = () => {
       />
     </>
   );
-};
+}
 
 export default Home;

@@ -2,7 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 
-const JoinTeamSection = () => {
+function JoinTeamSection() {
   const contentRef = useRef(null);
   const statsRef = useRef(null);
   const isContentInView = useInView(contentRef, {
@@ -73,6 +73,6 @@ const JoinTeamSection = () => {
       </div>
     </section>
   );
-};
+}
 
 export default JoinTeamSection;

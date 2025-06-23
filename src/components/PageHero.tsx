@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
  * @param {string} props.backgroundImage - Optional URL for background image
  * @param {React.ReactNode} props.children - Optional additional content to render below description
  */
-const PageHero = ({
+function PageHero({
   title,
   description,
   centered = true,
@@ -21,7 +21,7 @@ const PageHero = ({
   centered?: boolean;
   backgroundImage?: string;
   children?: React.ReactNode;
-}) => {
+}) {
   // Determine if we should use the home page style (with background image) or standard style
   const isHomeStyle = !!backgroundImage;
 
@@ -63,6 +63,6 @@ const PageHero = ({
       </div>
     </section>
   );
-};
+}
 
 export default PageHero;

@@ -5,7 +5,7 @@ import CoreValuesSection from "./CoreValuesSection";
 import TeamSection from "./TeamSection";
 import PageHero from "../../components/PageHero";
 
-const About = () => {
+function About() {
   return (
     <>
       <SEOHelmet
@@ -27,6 +27,6 @@ const About = () => {
       <TeamSection />
     </>
   );
-};
+}
 
 export default About;
