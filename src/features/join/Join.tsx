@@ -18,10 +18,8 @@ function Join() {
       {/* Coming Soon Message */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6">Coming Soon</h2>
           <p className="text-xl text-gray-600 mb-8">
-            We're currently working on this page. Please check back later for
-            job opportunities.
+            Please check back later for job opportunities.
           </p>
           <a
             href="/contact"

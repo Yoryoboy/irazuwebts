@@ -250,11 +250,11 @@ function Contact() {
                       Office
                     </h3>
                     <p className="text-gray-600">
-                      123 Technology Plaza
+                      17604 E Peakview Ave
                       <br />
-                      San José, Costa Rica
+                      Centennial, Colorado
                       <br />
-                      10101
+                      80016
                     </p>
                   </div>
                 </div>
@@ -310,16 +310,16 @@ function Contact() {
       </section>
 
       {/* Map Section */}
-      <section className="py-12">
+      {/* <section className="py-12">
         <div className="container mx-auto px-4">
-          <div className="bg-gray-200 h-96 rounded-lg overflow-hidden">
-            {/* Replace with actual map component or embed */}
-            <div className="w-full h-full flex items-center justify-center bg-gray-300">
+          <div className="bg-gray-200 h-96 rounded-lg overflow-hidden"> */}
+      {/* Replace with actual map component or embed */}
+      {/* <div className="w-full h-full flex items-center justify-center bg-gray-300">
               <p className="text-gray-600">Map will be displayed here</p>
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }
