@@ -7,7 +7,14 @@ import metroEDesigns from "../../assets/images/metro_e_designs.webp";
 import bauDesigns from "../../assets/images/bau_designs.webp";
 import lodeDataDesigns from "../../assets/images/lode_data_designs.webp";
 
-export const servicesInfo = [
+interface Service {
+  title: string;
+  description: string;
+  items: string[];
+  image: string;
+}
+
+export const servicesInfo: Service[] = [
   {
     title: "FTTH Designs",
     description:

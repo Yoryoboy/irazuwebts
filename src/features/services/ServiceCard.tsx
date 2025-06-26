@@ -1,7 +1,14 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-function ServiceCard({ service, index }: { service: any; index: number }) {
+interface Service {
+  title: string;
+  description: string;
+  items: string[];
+  image: string;
+}
+
+function ServiceCard({ service, index }: { service: Service; index: number }) {
   // Determine if image should be on left or right based on index
   const isEven = index % 2 === 0;
   const ref = useRef(null);
