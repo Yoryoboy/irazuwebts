@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import PageHero from "../../components/PageHero";
 import SEOHelmet from "../../components/SEOHelmet";
 
@@ -21,12 +22,12 @@ function Join() {
           <p className="text-xl text-gray-600 mb-8">
             Please check back later for job opportunities.
           </p>
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className="bg-blue-600 text-white hover:bg-blue-700 px-8 py-4 rounded-md transition-colors font-medium text-lg inline-block"
           >
             Contact Us
-          </a>
+          </Link>
         </div>
       </section>
     </>
