@@ -3,15 +3,22 @@ import { useForm } from "react-hook-form";
 import PageHero from "../../components/PageHero";
 import SEOHelmet from "../../components/SEOHelmet";
 
+interface ContactFormData {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
+
 function Contact() {
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm();
+  } = useForm<ContactFormData>();
 
-  const onSubmit = (data) => {
+  const onSubmit = (data: ContactFormData) => {
     console.log(data);
     // Here you would typically send the data to your backend or email service
     alert("Thank you for your message! We will get back to you soon.");
@@ -132,7 +139,7 @@ function Contact() {
                   </label>
                   <textarea
                     id="message"
-                    rows="5"
+                    rows={5}
                     className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
                       errors.message ? "border-red-500" : "border-gray-300"
                     }`}
@@ -177,7 +184,7 @@ function Contact() {
 
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 bg-blue-100 rounded-full p-3 mr-4">
+                  {/* <div className="flex-shrink-0 bg-blue-100 rounded-full p-3 mr-4">
                     <svg
                       className="w-6 h-6 text-blue-600"
                       fill="none"
@@ -196,7 +203,7 @@ function Contact() {
                   <div>
                     <h3 className="text-lg font-medium text-gray-800">Phone</h3>
                     <p className="text-gray-600">+1 (555) 123-4567</p>
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="flex items-start">
