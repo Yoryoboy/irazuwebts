@@ -29,12 +29,12 @@ function MissionVisionSection() {
             <h2 className="text-3xl font-bold text-gray-800 mb-6">
               Our Mission
             </h2>
-            <p className="text-gray-800 mb-6 leading-relaxed text-lg max-w-3xl">
+            <p className="text-gray-800 mb-6 leading-relaxed text-lg max-w-3xl text-justify hyphens-auto">
               To deliver top-tier telecommunication design services through
               continuous improvement, high-quality standards, and client-centric
               strategies.
             </p>
-            <p className="text-gray-800 mb-6 leading-relaxed text-lg max-w-3xl">
+            <p className="text-gray-800 mb-6 leading-relaxed text-lg max-w-3xl text-justify hyphens-auto">
               We are committed to delivering exceptional value to our clients by
               combining technical expertise with a deep understanding of
               business needs.
@@ -51,12 +51,12 @@ function MissionVisionSection() {
             className="bg-blue-600 text-white p-8 rounded-lg"
           >
             <h2 className="text-3xl font-bold mb-6">Our Vision</h2>
-            <p className="mb-6 leading-relaxed text-lg max-w-3xl">
+            <p className="mb-6 leading-relaxed text-lg max-w-3xl text-justify hyphens-auto ">
               To be the most trusted partner in telecommunication network
               design, setting industry standards for quality, efficiency, and
               innovation.
             </p>
-            <p className="mb-6 leading-relaxed text-lg max-w-3xl">
+            <p className="mb-6 leading-relaxed text-lg max-w-3xl text-justify hyphens-auto">
               We envision a future where our innovative solutions help
               organizations of all sizes harness the full potential of
               technology to achieve their goals.

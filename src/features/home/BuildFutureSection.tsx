@@ -34,18 +34,18 @@ function BuildFutureSection() {
             <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
               Local Values, Global Impact
             </h3>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 mb-6" style={{ textAlign: 'justify', hyphens: 'auto', wordSpacing: '-0.05em' }}>
               We are a U.S.-based telecommunications design company founded in
               2020 in Denver, Colorado. Although young as a company, Irazu
               Technology is built on over 40 years of combined experience in the
               Cable TV and Communications industry.
             </p>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 mb-6" style={{ textAlign: 'justify', hyphens: 'auto', wordSpacing: '-0.05em' }}>
               Our specialized team continues to grow as we meet the increasing
               demand for high-quality HFC and FTTH solutions across the United
               States.
             </p>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 mb-6" style={{ textAlign: 'justify', hyphens: 'auto', wordSpacing: '-0.05em' }}>
               At Irazu Technology, we believe in building strong partnerships
               with our clients and continuously improving our processes to
               deliver reliable, scalable, and innovative results.

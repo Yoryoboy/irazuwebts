@@ -29,7 +29,7 @@ function JoinTeamSection() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Join Our Team
             </h2>
-            <p className="text-xl mb-8">
+            <p className="text-xl mb-8 ">
               We're building a company where technical excellence meets a
               collaborative culture. Whether you're a seasoned network engineer
               or a motivated newcomer, we invite you to help us shape the future

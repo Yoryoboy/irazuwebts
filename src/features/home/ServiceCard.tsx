@@ -21,7 +21,7 @@ function ServiceCard({ service, index }: { service: any; index: number }) {
         <h3 className="text-xl font-bold text-gray-800 mb-3">
           {service.title}
         </h3>
-        <p className="text-gray-600 mb-6">{service.description}</p>
+        <p className="text-gray-600 mb-6 ">{service.description}</p>
         <Link
           to={`/services#${service.id}`}
           className="inline-flex items-center text-blue-600 font-medium hover:text-blue-800"
