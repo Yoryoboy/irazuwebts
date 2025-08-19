@@ -1,7 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
-import companyImage from "../../assets/images/telecommunications-build.webp";
+import cadftth from "../../assets/images/cadftth.webp";
 
 function BuildFutureSection() {
   const ref1 = useRef(null);
@@ -77,12 +77,12 @@ function BuildFutureSection() {
             initial={{ opacity: 0, x: 20 }}
             animate={isInView2 ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
             transition={{ duration: 0.8 }}
-            className="rounded-lg overflow-hidden shadow-xl"
           >
             <img
-              src={companyImage}
+              src={cadftth}
               alt="Irazu Technology Headquarters"
-              className="w-full h-auto"
+              className="w-full h-auto max-w-[400px] mx-auto rounded-lg shadow-lg"
+              style={{ aspectRatio: "2/3" }}
             />
           </motion.div>
         </div>

@@ -3,7 +3,7 @@ import CTA from "../../components/CTA";
 import PageHero from "../../components/PageHero";
 import SEOHelmet from "../../components/SEOHelmet";
 import BuildFutureSection from "./BuildFutureSection";
-import companyImage from "../../assets/images/hero-telecom.webp";
+import heroVideo from "../../assets/video/hero.mp4";
 import ServicesHighlight from "./ServicesHighlight";
 import JoinTeamSection from "./JoinTeamSection";
 
@@ -19,7 +19,7 @@ function Home() {
         title="Leading Telecommunication Network Design Services"
         description="Expert telecommunication network design services specializing in HFC and FTTH solutions for the modern digital infrastructure"
         centered={false}
-        backgroundImage={companyImage}
+        backgroundVideo={heroVideo}
       >
         <div className="flex flex-wrap gap-4">
           <Link

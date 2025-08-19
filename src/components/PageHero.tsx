@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
  * @param {string} props.description - The subheading text
  * @param {boolean} props.centered - Whether to center the text (default: true)
  * @param {string} props.backgroundImage - Optional URL for background image
+ * @param {string} props.backgroundVideo - Optional URL for background video
  * @param {React.ReactNode} props.children - Optional additional content to render below description
  */
 function PageHero({
@@ -14,16 +15,18 @@ function PageHero({
   description,
   centered = true,
   backgroundImage,
+  backgroundVideo,
   children,
 }: {
   title: string;
   description: string;
   centered?: boolean;
   backgroundImage?: string;
+  backgroundVideo?: string;
   children?: React.ReactNode;
 }) {
-  // Determine if we should use the home page style (with background image) or standard style
-  const isHomeStyle = !!backgroundImage;
+  // Determine if we should use the home page style (with background image/video) or standard style
+  const isHomeStyle = !!backgroundImage || !!backgroundVideo;
 
   return (
     <section
@@ -36,10 +39,24 @@ function PageHero({
       {isHomeStyle && (
         <>
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-800/50 z-10"></div>
-          <div
-            className="absolute inset-0 bg-cover bg-center opacity-90"
-            style={{ backgroundImage: `url('${backgroundImage}')` }}
-          ></div>
+          {backgroundVideo ? (
+            <div className="absolute inset-0 overflow-hidden">
+              <video
+                className="absolute inset-0 w-full  object-cover opacity-90"
+                autoPlay
+                muted
+                loop
+                playsInline
+              >
+                <source src={backgroundVideo} type="video/mp4" />
+              </video>
+            </div>
+          ) : (
+            <div
+              className="absolute inset-0 bg-cover bg-center opacity-90"
+              style={{ backgroundImage: `url('${backgroundImage}')` }}
+            ></div>
+          )}
         </>
       )}
 
