@@ -42,7 +42,15 @@ function PageHero({
           {backgroundVideo ? (
             <div className="absolute inset-0 overflow-hidden">
               <video
-                className="absolute inset-0 w-full  object-cover opacity-90"
+                className="absolute inset-0 w-full h-full object-cover opacity-90"
+                style={{ 
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                  minWidth: "100%",
+                  minHeight: "100%"
+                }}
                 autoPlay
                 muted
                 loop
