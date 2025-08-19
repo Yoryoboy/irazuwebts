@@ -40,8 +40,10 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
           <h2 className="text-3xl font-bold text-gray-800 mb-6">
             {service.title}
           </h2>
-          <p className="text-gray-600 mb-6">{service.description}</p>
-          <ul className="space-y-3 mb-6">
+          <p className="text-gray-600 mb-6 text-justify hyphens-auto">
+            {service.description}
+          </p>
+          <ul className="space-y-3 mb-6 text-justify hyphens-auto">
             {service.items.map((item, i) => (
               <li key={i} className="flex items-start">
                 <svg
