@@ -8,6 +8,7 @@ const About = lazy(() => import("../features/about/About"));
 const Services = lazy(() => import("../features/services/Services"));
 const Join = lazy(() => import("../features/join/Join"));
 const Contact = lazy(() => import("../features/contact/Contact"));
+const NotFound = lazy(() => import("../features/notfound/NotFound"));
 
 export const router = createBrowserRouter([
   {
@@ -51,6 +52,14 @@ export const router = createBrowserRouter([
         element: (
           <Suspense fallback={<PageLoader />}>
             <Contact />
+          </Suspense>
+        ),
+      },
+      {
+        path: "*", // Catch-all for any unmatched route under the main layout
+        element: (
+          <Suspense fallback={<PageLoader />}>
+            <NotFound />
           </Suspense>
         ),
       },
