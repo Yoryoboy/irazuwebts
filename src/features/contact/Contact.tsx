@@ -52,7 +52,7 @@ function Contact() {
               <h2 className="text-2xl font-bold text-gray-800 mb-6">
                 Send Us a Message
               </h2>
-              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" aria-live="polite">
                 <div>
                   <label
                     htmlFor="name"
@@ -68,9 +68,11 @@ function Contact() {
                     }`}
                     placeholder="Your name"
                     {...register("name", { required: "Name is required" })}
+                    aria-invalid={!!errors.name}
+                    aria-describedby={errors.name ? "name-error" : undefined}
                   />
                   {errors.name && (
-                    <p className="mt-1 text-sm text-red-600">
+                    <p id="name-error" role="alert" className="mt-1 text-sm text-red-600">
                       {errors.name.message}
                     </p>
                   )}
@@ -97,9 +99,11 @@ function Contact() {
                         message: "Invalid email address",
                       },
                     })}
+                    aria-invalid={!!errors.email}
+                    aria-describedby={errors.email ? "email-error" : undefined}
                   />
                   {errors.email && (
-                    <p className="mt-1 text-sm text-red-600">
+                    <p id="email-error" role="alert" className="mt-1 text-sm text-red-600">
                       {errors.email.message}
                     </p>
                   )}
@@ -122,9 +126,11 @@ function Contact() {
                     {...register("subject", {
                       required: "Subject is required",
                     })}
+                    aria-invalid={!!errors.subject}
+                    aria-describedby={errors.subject ? "subject-error" : undefined}
                   />
                   {errors.subject && (
-                    <p className="mt-1 text-sm text-red-600">
+                    <p id="subject-error" role="alert" className="mt-1 text-sm text-red-600">
                       {errors.subject.message}
                     </p>
                   )}
@@ -147,9 +153,11 @@ function Contact() {
                     {...register("message", {
                       required: "Message is required",
                     })}
+                    aria-invalid={!!errors.message}
+                    aria-describedby={errors.message ? "message-error" : undefined}
                   ></textarea>
                   {errors.message && (
-                    <p className="mt-1 text-sm text-red-600">
+                    <p id="message-error" role="alert" className="mt-1 text-sm text-red-600">
                       {errors.message.message}
                     </p>
                   )}
