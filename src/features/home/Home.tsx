@@ -11,7 +11,7 @@ function Home() {
   return (
     <>
       <SEOHelmet
-        title="Leading Telecommunication Network Design Services"
+        title="Home"
         siteName="Irazu Technology"
         description="Expert telecommunication network design services specializing in HFC and FTTH solutions for the modern digital infrastructure"
       />
