@@ -63,6 +63,9 @@ function SoftwareBannerBase() {
               className="rounded-md border border-gray-200 bg-white/60 p-2.5 shadow-sm"
             >
               <LogoTile src={src} alt={alt} />
+              <p className="mt-2 text-center text-xs sm:text-sm text-gray-600 font-medium">
+                {alt}
+              </p>
             </div>
           ))}
         </div>
