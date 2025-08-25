@@ -99,16 +99,16 @@ export const servicesInfo: Service[] = [
     ],
     image: bauDesigns,
   },
-  {
-    title: "LODE DATA Designs with BOM",
-    description:
-      "Using LodeData, we create detailed network blueprints complete with accurate Bills of Materials (BOM). These designs streamline procurement and construction processes by eliminating guesswork and waste.",
-    items: [
-      "Network layout using LodeData tools",
-      "Generation of accurate and complete BOMs",
-      "Drafting Assistant and Design Assistant utilization",
-      "Fiber module configurations and summaries",
-    ],
-    image: lodeDataDesigns,
-  },
+  // {
+  //   title: "LODE DATA Designs with BOM",
+  //   description:
+  //     "Using LodeData, we create detailed network blueprints complete with accurate Bills of Materials (BOM). These designs streamline procurement and construction processes by eliminating guesswork and waste.",
+  //   items: [
+  //     "Network layout using LodeData tools",
+  //     "Generation of accurate and complete BOMs",
+  //     "Drafting Assistant and Design Assistant utilization",
+  //     "Fiber module configurations and summaries",
+  //   ],
+  //   image: lodeDataDesigns,
+  // },
 ];
