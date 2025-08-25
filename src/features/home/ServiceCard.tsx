@@ -1,9 +1,22 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 
-function ServiceCard({ service, index }: { service: any; index: number }) {
-  const cardRef = useRef(null);
+type FeaturedService = {
+  id: string;
+  title: string;
+  description: string;
+  icon: ReactNode;
+};
+
+interface ServiceCardProps {
+  service: FeaturedService;
+  index: number;
+}
+
+function ServiceCard({ service, index }: ServiceCardProps) {
+  const cardRef = useRef<HTMLDivElement | null>(null);
   const isCardInView = useInView(cardRef, { once: true, margin: "-50px 0px" });
 
   return (

@@ -5,7 +5,6 @@ import draftingDesigns from "../../assets/images/drafting_designs.webp";
 import highSplitDesigns from "../../assets/images/high_split_designs.webp";
 import metroEDesigns from "../../assets/images/metro_e_designs.webp";
 import bauDesigns from "../../assets/images/bau_designs.webp";
-import lodeDataDesigns from "../../assets/images/lode_data_designs.webp";
 
 interface Service {
   title: string;
