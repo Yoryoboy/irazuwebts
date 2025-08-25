@@ -2,6 +2,7 @@ import CTA from "../../components/CTA";
 import PageHero from "../../components/PageHero";
 import SEOHelmet from "../../components/SEOHelmet";
 import ServicesList from "./ServicesList";
+import SoftwareBanner from "./SoftwareBanner";
 
 function Services() {
   return (
@@ -19,6 +20,9 @@ function Services() {
 
       {/* Service Sections */}
       <ServicesList />
+
+      {/* Software Banner */}
+      <SoftwareBanner />
 
       {/* CTA Section */}
       <CTA
