@@ -31,7 +31,7 @@ function LogoTile({ src, alt }: { src: string; alt: string }) {
         alt={alt}
         loading="lazy"
         decoding="async"
-        className="absolute inset-0 m-auto max-h-[80%] max-w-[80%] object-contain"
+        className="absolute inset-0 m-auto max-h-[92%] max-w-[92%] object-contain"
       />
     </div>
   );
@@ -39,14 +39,18 @@ function LogoTile({ src, alt }: { src: string; alt: string }) {
 
 function SoftwareBannerBase() {
   return (
-    <section aria-labelledby="software-banner-title" className="py-12">
+    <section
+      aria-labelledby="software-banner-title"
+      className="bg-blue-50 py-16 md:py-24"
+    >
       <div className="container mx-auto px-4">
         <h2
           id="software-banner-title"
-          className="text-center text-sm font-medium tracking-wider text-gray-500 mb-8"
+          className="text-3xl md:text-4xl font-bold text-gray-800 text-center"
         >
           Software we work with
         </h2>
+        <div className="w-24 h-1 bg-blue-600 mx-auto mt-6 mb-16"></div>
         <div
           className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 items-center"
           role="list"
@@ -56,7 +60,7 @@ function SoftwareBannerBase() {
             <div
               key={alt}
               role="listitem"
-              className="rounded-md border border-gray-200 bg-white/60 p-3 shadow-sm"
+              className="rounded-md border border-gray-200 bg-white/60 p-2.5 shadow-sm"
             >
               <LogoTile src={src} alt={alt} />
             </div>
