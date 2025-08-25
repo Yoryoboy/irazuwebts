@@ -21,21 +21,27 @@ function Navbar() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/about" className="hover:text-blue-400 transition-colors">
+            <Link
+              to="/about"
+              className="hover:text-blue-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 rounded"
+            >
               ABOUT US
             </Link>
             <Link
               to="/services"
-              className="hover:text-blue-400 transition-colors"
+              className="hover:text-blue-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 rounded"
             >
               SERVICES
             </Link>
-            <Link to="/join" className="hover:text-blue-400 transition-colors">
+            <Link
+              to="/join"
+              className="hover:text-blue-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 rounded"
+            >
               JOIN IRAZU
             </Link>
             <Link
               to="/contact"
-              className="hover:text-blue-400 transition-colors"
+              className="hover:text-blue-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 rounded"
             >
               CONTACT
             </Link>
@@ -43,9 +49,11 @@ function Navbar() {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden text-white"
+            className="md:hidden text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 rounded"
             onClick={toggleMenu}
             aria-label="Toggle menu"
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -55,43 +63,45 @@ function Navbar() {
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="md:hidden bg-gray-800 px-4 py-2">
-          <nav className="flex flex-col space-y-3 pb-3">
+          <nav id="mobile-menu" className="flex flex-col space-y-3 pb-3">
             <Link
               to="/about"
-              className="hover:text-blue-400 transition-colors py-2"
+              className="hover:text-blue-400 transition-colors py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-800 rounded"
               onClick={() => setIsMenuOpen(false)}
             >
               ABOUT US
             </Link>
             <Link
               to="/services"
-              className="hover:text-blue-400 transition-colors py-2"
+              className="hover:text-blue-400 transition-colors py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-800 rounded"
               onClick={() => setIsMenuOpen(false)}
             >
               SERVICES
             </Link>
             <Link
               to="/join"
-              className="hover:text-blue-400 transition-colors py-2"
+              className="hover:text-blue-400 transition-colors py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-800 rounded"
               onClick={() => setIsMenuOpen(false)}
             >
               JOIN IRAZU
             </Link>
             <Link
               to="/contact"
-              className="hover:text-blue-400 transition-colors py-2"
+              className="hover:text-blue-400 transition-colors py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-800 rounded"
               onClick={() => setIsMenuOpen(false)}
             >
               CONTACT
             </Link>
             <Link
               to="/contact"
-              className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md transition-colors text-center"
+              className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md transition-colors text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-800"
               onClick={() => setIsMenuOpen(false)}
             >
               Get Started Today
             </Link>
-            <button className="border border-white hover:border-blue-400 hover:text-blue-400 px-3 py-1 rounded-md transition-colors w-full">
+            <button
+              className="border border-white hover:border-blue-400 hover:text-blue-400 px-3 py-1 rounded-md transition-colors w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-800"
+            >
               Search
             </button>
           </nav>
