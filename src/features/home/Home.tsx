@@ -4,7 +4,6 @@ import PageHero from "../../components/PageHero";
 import SEOHelmet from "../../components/SEOHelmet";
 import BuildFutureSection from "./BuildFutureSection";
 import heroVideo from "../../assets/video/hero.mp4";
-import heroVideo2 from "../../assets/video/hero2.mp4";
 import ServicesHighlight from "./ServicesHighlight";
 import JoinTeamSection from "./JoinTeamSection";
 
