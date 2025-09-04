@@ -24,7 +24,7 @@ serve(async (req) => {
 
     const result = await resend.emails.send({
       from: "onboarding@resend.dev", // podés usar el dominio verificado de tu empresa
-      to: [email], // copia al usuario + empresa
+      to: ["jorge.diaz.blingenieria@gmail.com"], // copia al usuario + empresa
       subject: `Nuevo contacto de ${name}`,
       html: `<p><b>Nombre:</b> ${name}</p>
              <p><b>Email:</b> ${email}</p>
