@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import PageHero from "../../components/PageHero";
 import SEOHelmet from "../../components/SEOHelmet";
+import { useState } from "react";
 
 interface ContactFormData {
   name: string;
@@ -11,6 +12,9 @@ interface ContactFormData {
 }
 
 function Contact() {
+  const [loading, setLoading] = useState(false);
+  const [serverError, setServerError] = useState<string | null>(null);
+  const [serverSuccess, setServerSuccess] = useState<string | null>(null);
   const {
     register,
     handleSubmit,
@@ -18,11 +22,40 @@ function Contact() {
     reset,
   } = useForm<ContactFormData>();
 
-  const onSubmit = (data: ContactFormData) => {
-    console.log(data);
-    // Here you would typically send the data to your backend or email service
-    alert("Thank you for your message! We will get back to you soon.");
-    reset();
+  const onSubmit = async (data: ContactFormData) => {
+    setLoading(true);
+    setServerError(null);
+    setServerSuccess(null);
+    try {
+      const baseUrl =
+        import.meta.env?.VITE_SUPABASE_FUNCTIONS_URL ??
+        "http://localhost:54321/functions/v1";
+
+      const res = await fetch(`${baseUrl}/send-contact-email`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          message: data.message,
+        }),
+      });
+
+      if (!res.ok) {
+        const errText = await res.text();
+        throw new Error(errText || `Request failed with ${res.status}`);
+      }
+
+      setServerSuccess("Thank you for your message! We will get back to you soon.");
+      reset();
+    } catch (e: unknown) {
+      const message = e instanceof Error ? e.message : String(e);
+      setServerError(message || "Something went wrong. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -163,11 +196,28 @@ function Contact() {
                   )}
                 </div>
 
+                {/* Server feedback */}
+                {serverError && (
+                  <div role="alert" className="rounded-md bg-red-50 p-3 text-red-700">
+                    {serverError}
+                  </div>
+                )}
+                {serverSuccess && (
+                  <div role="status" className="rounded-md bg-green-50 p-3 text-green-700">
+                    {serverSuccess}
+                  </div>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 transition-colors font-medium"
+                  disabled={loading}
+                  className={`w-full text-white py-3 px-6 rounded-md transition-colors font-medium ${
+                    loading
+                      ? "bg-blue-400 cursor-not-allowed"
+                      : "bg-blue-600 hover:bg-blue-700"
+                  }`}
                 >
-                  Send Message
+                  {loading ? "Sending..." : "Send Message"}
                 </button>
               </form>
             </motion.div>
