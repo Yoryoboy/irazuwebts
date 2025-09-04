@@ -23,14 +23,6 @@ const teamMembers = [
     email: "cecilia@irazu.tech",
   },
   {
-    name: "Jorge Diaz",
-    position: "Project Manager",
-    bio: "Jorge Diaz is a seasoned project manager with over 7 years of experience in the industry. He is responsible for ensuring the accuracy and integrity of our financial records and reporting.",
-    image: jorge,
-    linkedin: "#",
-    email: "jorge@irazu.tech",
-  },
-  {
     name: "Efrain Camacho",
     position: "Project Manager",
     bio: "Efrain Camacho is a seasoned project manager with over 7 years of experience in the industry. He is responsible for ensuring the accuracy and integrity of our financial records and reporting.",
@@ -45,6 +37,14 @@ const teamMembers = [
     image: lautaro,
     linkedin: "#",
     email: "lautaro@irazu.tech",
+  },
+  {
+    name: "Jorge Diaz",
+    position: "Project Manager",
+    bio: "Jorge Diaz is a seasoned project manager with over 7 years of experience in the industry. He is responsible for ensuring the accuracy and integrity of our financial records and reporting.",
+    image: jorge,
+    linkedin: "#",
+    email: "jorge@irazu.tech",
   },
 ];
 
