@@ -8,7 +8,8 @@ const resend = new Resend(Deno.env.get("RESEND_API_KEY")!);
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+  "Access-Control-Allow-Headers":
+    "authorization, x-client-info, apikey, content-type",
   "Access-Control-Allow-Methods": "POST, OPTIONS",
 };
 
@@ -22,7 +23,7 @@ serve(async (req) => {
     const { name, email, message } = await req.json();
 
     const result = await resend.emails.send({
-      from: "no-reply@irazutechnology.com", // podés usar el dominio verificado de tu empresa
+      from: "onboarding@resend.dev", // podés usar el dominio verificado de tu empresa
       to: [email, "jdiaz@irazutechnology.com"], // copia al usuario + empresa
       subject: `Nuevo contacto de ${name}`,
       html: `<p><b>Nombre:</b> ${name}</p>
@@ -31,11 +32,20 @@ serve(async (req) => {
     });
 
     if (result.error) {
-      return new Response(JSON.stringify(result.error), { status: 500, headers: { ...corsHeaders } });
+      return new Response(JSON.stringify(result.error), {
+        status: 500,
+        headers: { ...corsHeaders },
+      });
     }
 
-    return new Response("Correo enviado con éxito", { status: 200, headers: { ...corsHeaders } });
+    return new Response("Correo enviado con éxito", {
+      status: 200,
+      headers: { ...corsHeaders },
+    });
   } catch (err) {
-    return new Response(`Error: ${err}`, { status: 500, headers: { ...corsHeaders } });
+    return new Response(`Error: ${err}`, {
+      status: 500,
+      headers: { ...corsHeaders },
+    });
   }
 });
