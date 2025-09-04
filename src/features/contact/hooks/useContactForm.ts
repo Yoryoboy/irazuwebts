@@ -21,14 +21,39 @@ export const useContactForm = () => {
     });
 
     try {
-      const baseUrl =
+      const baseUrlRaw =
         import.meta.env?.VITE_SUPABASE_FUNCTIONS_URL ??
         "http://localhost:54321/functions/v1";
 
-      const response = await fetch(`${baseUrl}/send-contact-email`, {
+      // Normalize base URL (remove trailing slash)
+      const baseUrl = baseUrlRaw.replace(/\/$/, "");
+
+      // Build endpoint robustly. If the env already includes the function path, don't append it again.
+      const endpoint = /\/send-contact-email$/.test(baseUrl)
+        ? baseUrl
+        : `${baseUrl}/send-contact-email`;
+
+      // When verify_jwt=true (default in production), the Edge Function requires an Authorization header.
+      // Use the public anon key from the environment.
+      const anonKey = import.meta.env?.VITE_SUPABASE_ANON_KEY as
+        | string
+        | undefined;
+
+      // Proactive runtime hint if misconfigured in production
+      if (!anonKey && /\.functions\.supabase\.co$/.test(new URL(endpoint).host)) {
+        throw new Error(
+          "Supabase anon key missing. Please set VITE_SUPABASE_ANON_KEY in your hosting env."
+        );
+      }
+
+      const response = await fetch(endpoint, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          // For Supabase Functions with verify_jwt enabled, send both Authorization and apikey headers.
+          ...(anonKey
+            ? { Authorization: `Bearer ${anonKey}`, apikey: anonKey }
+            : {}),
         },
         body: JSON.stringify({
           name: data.name,
