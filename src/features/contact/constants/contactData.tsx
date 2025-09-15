@@ -19,7 +19,7 @@ export const CONTACT_INFO: ContactInfo[] = [
       </svg>
     ),
     title: "Email",
-    content: "info@irazu.tech",
+    content: "info@irazutechnology.com",
   },
   {
     icon: (
